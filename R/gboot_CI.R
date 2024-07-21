@@ -24,11 +24,12 @@
 #'  \code{\link[geotoolsR]{gboot_cloud}}, \code{\link[geotoolsR]{gboot_cross}},
 #'   \code{\link[geotoolsR]{gboot_solow}}, \code{\link[geotoolsR]{gboot_variogram}}
 #'
+#' @return Invalid arguments will return an error message.
 #' @keywords Bootstrap CI
 #' @export
 
 gboot_CI<-function(x,alpha=0.05,digits=3){
-  
+
   Parameter=Value=Bound=NULL
 
   #Auxiliary functions
@@ -49,7 +50,7 @@ gboot_CI<-function(x,alpha=0.05,digits=3){
 
   CI_pars[,3]<-round(CI_pars[,3],digits)
 
-  cat("Parameters confidence interval (",
+  message("Parameters confidence interval (",
       100*(1-alpha),"%): \n",sep="")
   CI_pars
 

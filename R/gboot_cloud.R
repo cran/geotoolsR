@@ -44,8 +44,8 @@
 #'
 #' @keywords Spatial Bootstrap Variogram Cloud
 #' @examples
-#' 
-#' \dontrun{
+#'
+#' \donttest{
 #' # Example 1
 #'
 #' ## transforming the data.frame in an object of class geodata
@@ -103,7 +103,7 @@
 gboot_cloud<-function(data,var,model,B=1000){
 
   Distance=Semivariance=NULL
-  
+
   #Testing
   if(is.geodata(data) == T){
   }else{

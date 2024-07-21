@@ -4,7 +4,9 @@
 \name{soilmoisture}
 \alias{soilmoisture}
 \title{Soil moisture experiment}
-\format{An object of class data.frame}
+\format{
+An object of class data.frame
+}
 \usage{
 data(soilmoisture)
 }

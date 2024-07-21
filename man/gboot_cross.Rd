@@ -46,7 +46,7 @@ where \eqn{\hat Z({s_i})} are obtained from cross-validation. The steps of the a
 }
 \examples{
 
-\dontrun{
+\donttest{
 # Example 1
 
 ## transforming the data.frame in an object of class geodata

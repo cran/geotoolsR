@@ -75,7 +75,7 @@
 #'
 #' gboot_plot(boot) ## Bootstrap Variogram plot
 #'
-#' \dontrun{
+#' \donttest{
 #' # Example 2
 #'
 #' ## transforming the data.frame in an object of class geodata
@@ -112,7 +112,7 @@
 gboot_solow<-function(data,var,model,B=1000){
 
   Distance=Semivariance=NULL
-  
+
   #Testing
   if(is.geodata(data) == T){
   }else{

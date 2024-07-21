@@ -4,7 +4,9 @@
 \name{NVDI}
 \alias{NVDI}
 \title{Normalized Difference Vegetation Index experiment}
-\format{An object of class data.frame}
+\format{
+An object of class data.frame
+}
 \usage{
 data(soilmoisture)
 }

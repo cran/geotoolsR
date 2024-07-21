@@ -46,7 +46,7 @@ The steps are:
 }
 \examples{
 
-\dontrun{
+\donttest{
 # Example 1
 
 ## transforming the data.frame in an object of class geodata

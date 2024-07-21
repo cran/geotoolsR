@@ -15,6 +15,9 @@ gboot_CI(x,alpha=0.05,digits=3)
 
 \item{digits}{number of decimal places.}
 }
+\value{
+Invalid arguments will return an error message.
+}
 \description{
 Provides a two-sided bootstrap confidence interval.
 }

@@ -1,6 +1,6 @@
 #' @name gboot_plot
 #' @aliases gboot_plot
-#' 
+#'
 #' @import ggplot2
 #'
 #' @title Bootstrap plot
@@ -19,14 +19,15 @@
 #' @details Examples of this function can be found in \code{\link[geotoolsR]{gboot_block}},
 #'  \code{\link[geotoolsR]{gboot_cloud}}, \code{\link[geotoolsR]{gboot_cross}},
 #'   \code{\link[geotoolsR]{gboot_solow}}, \code{\link[geotoolsR]{gboot_variogram}}
-#' 
+#'
+#' @return Invalid arguments will return an error message.
 #' @export
 
 
 # gboot_plot --------------------------------------------------------------
 
 gboot_plot<-function(x){
-    
+
     Distance=Semivariance=NULL
 
     p1<-ggplot(x[[1]],aes(x=Distance,y=Semivariance))+

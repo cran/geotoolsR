@@ -45,8 +45,8 @@
 #'
 #' @keywords Spatial Bootstrap Block
 #' @examples
-#' 
-#' \dontrun{
+#'
+#' \donttest{
 #' # Example 1
 #'
 #' ## transforming the data.frame in an object of class geodata
@@ -104,8 +104,8 @@
 gboot_block<-function(data,var,model,B=1000,L1=2,L2=2){
 
   lat=long=block=value=Distance=Semivariance=NULL
-  
-  #Testing
+
+    #Testing
   if(is.geodata(data) == T){
   }else{
     stop("Object data is not of the class geodata")
@@ -122,7 +122,6 @@ gboot_block<-function(data,var,model,B=1000,L1=2,L2=2){
   }else{
     stop("Object B must be positive")
   }
-
 
   #Auxiliary functions
   quiet<-function(x){
@@ -202,8 +201,9 @@ gboot_block<-function(data,var,model,B=1000,L1=2,L2=2){
       group_by(block) %>%
       nest() %>%
       sample_frac() %>%
-      unnest() %>%
+      unnest(cols = c(data)) %>%
       select(value)
+    sample$data<-as.data.frame(sample$data[,2])
 
     quiet(var_new<-variog(sample,
                           max.dist=max_dist))
@@ -237,7 +237,7 @@ gboot_block<-function(data,var,model,B=1000,L1=2,L2=2){
 
   names(pars_or)<-c("Nugget","Sill","Contribution","Range","Practical Range")
 
-  print(p1)
+  p1
 
   return(list(variogram_boot=var_df,
               variogram_or=var_aux,

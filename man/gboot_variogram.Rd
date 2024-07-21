@@ -67,7 +67,7 @@ gboot_CI(boot,digits = 4) ## Bootstrap Confidence Interval
 
 gboot_plot(boot) ## Bootstrap Variogram plot
 
-\dontrun{
+\donttest{
 # Example 2
 
 ## transforming the data.frame in an object of class geodata

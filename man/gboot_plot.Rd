@@ -11,6 +11,9 @@ gboot_plot(x)
 \code{\link[geotoolsR]{gboot_cloud}}, \code{\link[geotoolsR]{gboot_cross}},
  \code{\link[geotoolsR]{gboot_solow}}, \code{\link[geotoolsR]{gboot_variogram}}}
 }
+\value{
+Invalid arguments will return an error message.
+}
 \description{
 A graphic with the original variogram and each of the B bootstrap variograms.
 }
